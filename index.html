@@ -3,6 +3,20 @@
 <head>
   <title>POPCAT CLASSIC</title>
   <style>
+    /*用容器將 title cat-img 元素包起來*/
+    .container {
+      /* 設定為 flexbox */
+      display: flex;
+      /* 垂直置中 */
+      align-items: center;
+      /* 水平置中 */
+      justify-content: center;
+      /* 設定高度 */
+      height: 100vh;
+      /* 設定背景顏色 */
+      background-color: #f0f0f0;
+      flex-direction: column;
+    }
 
     /* 1. 基本設定 */
     body {
@@ -58,9 +72,10 @@
 </head>
 
 <body>
-  <img class="title" src="imgs/popcat.svg" alt="POPCAT">
-  <div class="cat-img" id="p">0202</div>
-
+  <div class="container">
+    <img class="title" src="imgs/popcat.svg" alt="POPCAT">
+    <div class="cat-img" id="p">0202</div>
+  </div>
 <script>
     // 預加載替代的貓咪圖片
     const preload = new Image();
